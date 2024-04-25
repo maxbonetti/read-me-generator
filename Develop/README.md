@@ -1,9 +1,9 @@
 
-    # a
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+    # readme 
+    undefined
 
     ## Description
-    a
+    readme generator
 
     ## Table of Contents
         - [Installation](#installation)
@@ -14,23 +14,23 @@
         - [Questions](#questions)
 
     ## Installation Process
-    a
+    clone from github and run it in vscode
 
     ## Usage
-    a
+    terminal
 
     ## Contribution's
-    a
+    github 
 
     ## How to Test
-    a
+    test
 
     ## License's 
-    MIT
+    Apache License 2.0
 
     ### GitHub
-    a
+    maxbonetti
     
     ## Questions
-    If you have any questions in regards to a, please contact me at [a](mailto:a).
+    If you have any questions in regards to readme , please contact me at [maxwell.bonetti@gmail.com](mailto:maxwell.bonetti@gmail.com).
     

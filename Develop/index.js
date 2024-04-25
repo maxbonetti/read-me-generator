@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require(`inquirer`);
 const fs = require(`fs`);
+const colors = require(`colors`);
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -37,7 +38,7 @@ const questions = [
         type:'list',
         name:'license',
         message:'Choose a license for your project:',
-        choices:['MIT','GPL 3.0','Apache License 2.0','None']
+        choices:['MIT','GPL 3.0','Apache 2.0', 'BDS 3','None']
     },
     {
         type:'input',
@@ -114,7 +115,7 @@ function generateReadmeContent(answers) {
 
     ### GitHub
     ${answers.github}
-    
+
     ## Questions
     If you have any questions in regards to ${answers.title}, please contact me at [${answers.email}](mailto:${answers.email}).
     `;
