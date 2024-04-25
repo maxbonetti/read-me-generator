@@ -1,13 +1,12 @@
 // TODO: Include packages needed for this application
 const inquirer = require(`inquirer`);
 const fs = require(`fs`);
-const colors = require(`colors`);
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type:'input',
         name:'title',
-        message:'What is the title of your project?'.bgBlack.white
+        message:'What is the title of your project?'
     },
     {
         type:'input',
@@ -75,22 +74,47 @@ function init(questions) {
 init(questions);
 
 function generateReadmeContent(answers) {
+    const licenseBadge = {
+        'MIT': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+        'Apache 2.0': '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+        'GPL 3.0': '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
+        'BSD 3': '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)',
+        'None': ''
+    };
+
     return `
     # ${answers.title}
+    ${licenseBadge[answers.license]}
+
     ## Description
     ${answers.description}
+
+    ## Table of Contents
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [Contributing](#contributing)
+        - [Tests](#tests)
+        - [License](#license)
+        - [Questions](#questions)
+
     ## Installation Process
     ${answers.installation}
+
     ## Usage
     ${answers.usage}
+
     ## Contribution's
     ${answers.contributing}
+
     ## How to Test
     ${answers.test}
+
     ## License's 
     ${answers.license}
+
     ### GitHub
     ${answers.github}
+    
     ## Questions
     If you have any questions in regards to ${answers.title}, please contact me at [${answers.email}](mailto:${answers.email}).
     `;
